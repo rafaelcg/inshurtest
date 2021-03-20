@@ -4,6 +4,6 @@ import Profile from './Profile';
 
 test('renders learn react link', () => {
   const { getByText } = render(<Profile />);
-  const linkElement = getByText(/My Profile/i);
+  const linkElement = getByText(/Profile/i);
   expect(linkElement).toBeInTheDocument();
 });

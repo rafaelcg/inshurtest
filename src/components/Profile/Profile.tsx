@@ -20,10 +20,10 @@ const Profile = () => {
         <Box width={1} className={'profile__row__item'}>
           <ul className={'profile__list'}>
             <li>
-              <ProfileItem legend={'Job'} value={'test' || undefined} />
+              <ProfileItem legend={'Job'} value={'test'} />
             </li>
             <li>
-              <ProfileItem legend={'Favourite food'} value={'test' || undefined} />
+              <ProfileItem legend={'Favourite food'} value={'test'} />
             </li>
           </ul>
         </Box>

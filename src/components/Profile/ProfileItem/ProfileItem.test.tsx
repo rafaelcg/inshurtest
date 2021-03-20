@@ -1,9 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Profile from './Profile';
+import ProfileItem from './ProfileItem';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<Profile />);
-  const linkElement = getByText(/My Profile/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders the component with both values', async () => {
+  const { getByTestId } = render(<ProfileItem legend={'Legend'} value={'value'} />);
+  const legendElement = getByTestId('legendElement');
+  const valueElement = getByTestId('valueElement');
+
+  expect(legendElement.textContent).toBe('Legend:');
+  expect(valueElement.textContent).toBe('value');
 });
