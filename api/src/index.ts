@@ -11,7 +11,7 @@ const app = express();
 
 // Setup routes
 app.use(middleware);
-app.use('/api', routes);
+app.use('/', routes);
 
 // Listen
 app.listen(4000, () => {
