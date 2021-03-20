@@ -10,7 +10,8 @@ home.get('/users/:id', (request: Request, response: Response) => {
       id: id,
       name: 'Rafael Cammarano Guglielmi',
       jobTitle: 'Software Engineer',
-      favouriteFood: 'Lasagne'
+      favouriteFood: 'Lasagne',
+      photoURL: 'https://www.nme.com/wp-content/uploads/2020/06/Liam-Gallagher-696x442.jpg'
     });
   }
 

@@ -1,8 +1,25 @@
-.profile__container{
+.profile__container {
   border: 1px solid black;
 
-  .profile__list {
+  .profile__row {
 
+    .profile__row__item{
+      margin-bottom: 25px;
+      text-align: center;
+    }
 
+    .username {
+      font-size: 1.5em;
+    }
+
+    .photoContainer {
+      margin: auto;
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: center center url("https://s3.envato.com/files/270440720/CartoonDogPointer%20p.jpg");
+      background-size: 250px;
+    }
   }
 }
