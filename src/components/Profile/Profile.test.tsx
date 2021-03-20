@@ -29,7 +29,7 @@ describe('Profile tests', () => {
     const { queryByTestId } = render(<Profile />);
     const element = queryByTestId('element')
 
-    expect(mockedAxios.get).toHaveBeenCalledWith('http://localhost:4000/users/1');
+    expect(mockedAxios.get).toHaveBeenCalledWith('/users/1');
 
     await waitFor(() => {
       expect(element?.textContent).toContain('John Doe');
