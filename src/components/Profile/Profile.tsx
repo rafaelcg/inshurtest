@@ -51,7 +51,7 @@ const Profile = () => {
   useEffect(() => {
 
     // added some fake lag in the frontend to make it simpler
-    setTimeout(() => getUserProfile(), 2000)
+    setTimeout(() => getUserProfile(), 3000)
 
     return () => {
       //axios.cancel goes here
