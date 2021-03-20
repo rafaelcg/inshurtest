@@ -23,6 +23,8 @@ const Profile = () => {
     photoURL: undefined
   })
 
+  const [error, setError] = React.useState<boolean>(false)
+
   const getUserProfile = () => {
     axios
       .get('http://localhost:4000/users/1')
@@ -36,7 +38,13 @@ const Profile = () => {
             favouriteFood: userData.favouriteFood,
             photoURL: userData.photoURL
           })
+        } else {
+          setError(true)
         }
+      })
+      .catch(error => {
+        console.error("Fatal error: " + error)
+        setError(true)
       })
   }
 
@@ -54,14 +62,19 @@ const Profile = () => {
     <section className={'profile__container'}>
       <h1>Home &#62; Profile</h1>
 
+      {error && <div>An error has occured</div>}
+
       <Flex flexWrap={'wrap'} className={'profile__row'}>
 
         <Box width={1} className={'profile__row__item photo'}>
-            {user.photoURL 
-              ? <div className={'photoContainer'}>
-                  <img style={{ display: 'none' }} src={user.photoURL} alt={'User profile'} /> 
-                </div>
-              : <Skeleton circle={true} height={125} width={125} />}
+          {user.photoURL
+            ? <div className={'photoContainer'} style={{
+              backgroundImage: user.photoURL ? `url('${user.photoURL}')` : ''
+            }}>
+              {/* Would need a real img tag for a11y purposes */}
+              {/* <img style={{ display: 'none' }} src={user.photoURL} alt={'User profile'} /> */}
+            </div>
+            : <Skeleton circle={true} height={125} width={125} />}
         </Box>
 
         <Box width={1} className={'profile__row__item username'}>
