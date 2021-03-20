@@ -10,3 +10,10 @@ test('renders the component with both values', async () => {
   expect(legendElement.textContent).toBe('Legend:');
   expect(valueElement.textContent).toBe('value');
 });
+
+test('renders the skeleton when no value is passed', async () => {
+  const { getByTestId } = render(<ProfileItem legend={'Legend'} />);
+  const valueSkeleton = getByTestId('valueSkeleton');
+
+  expect(valueSkeleton).toBeInTheDocument();
+});

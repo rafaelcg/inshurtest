@@ -15,7 +15,7 @@ const ProfileItem = ({ legend, value }: ProfileItemProps) => {
       </Box>
 
       <Box width={8 / 12}>
-        <span data-testid={'valueElement'}>{value ? value : <Skeleton width={'100%'} />}</span>
+        <span data-testid={'valueElement'}>{value ? value : <div data-testid={'valueSkeleton'}><Skeleton width={'100%'} /></div>}</span>
       </Box>
     </Flex>
   )

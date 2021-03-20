@@ -20,7 +20,7 @@ const Profile = () => {
         <Box width={1} className={'profile__row__item'}>
           <ul className={'profile__list'}>
             <li>
-              <ProfileItem legend={'Job'} value={'test'} />
+              <ProfileItem legend={'Job'} />
             </li>
             <li>
               <ProfileItem legend={'Favourite food'} value={'test'} />
