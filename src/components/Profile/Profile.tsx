@@ -2,6 +2,7 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import { Box, Flex } from 'reflexbox';
 import './Profile.scss';
+import ProfileItem from './ProfileItem';
 
 const Profile = () => {
   return (
@@ -19,26 +20,10 @@ const Profile = () => {
         <Box width={1} className={'profile__row__item'}>
           <ul className={'profile__list'}>
             <li>
-              <Flex>
-                <Box width={4 / 12}>
-                  <span>Job:</span>
-                </Box>
-
-                <Box width={8 / 12}>
-                  <span><Skeleton width={'100%'} /></span>
-                </Box>
-              </Flex>
+              <ProfileItem legend={'Job'} value={'test' || undefined} />
             </li>
             <li>
-              <Flex>
-                <Box width={4 / 12}>
-                  <span>Favourite food:</span>
-                </Box>
-
-                <Box width={8 / 12}>
-                  <span><Skeleton width={'100%'} /></span>
-                </Box>
-              </Flex>
+              <ProfileItem legend={'Favourite food'} value={'test' || undefined} />
             </li>
           </ul>
         </Box>
