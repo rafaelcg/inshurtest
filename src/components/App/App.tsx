@@ -8,7 +8,9 @@ function App() {
       <header className="App-header">
         Header
       </header>
-      <Profile />
+      <div id="content">
+        <Profile />
+      </div>
     </div>
   );
 }
